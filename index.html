@@ -4,8 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="script-src 'nonce-41908e6b3e214c1291e2d91d366f70dd' 'nonce-5ec5d13e056b49488eaa5fc3eec37749' 'nonce-121e80c04a964c459dbdb466464d3d55' 'strict-dynamic' 'unsafe-inline' https:;"
+    />
+    <script
+      nonce="41908e6b3e214c1291e2d91d366f70dd"
+      src="https://cdn.tailwindcss.com"
+    ></script>
+    <script nonce="41908e6b3e214c1291e2d91d366f70dd">
       tailwind.config = {
         theme: {
           extend: {
@@ -22,12 +29,17 @@
       }
     </style>
     <script
+      nonce="5ec5d13e056b49488eaa5fc3eec37749"
       src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
       integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script src="js/script.js" defer></script>
+    <script
+      nonce="121e80c04a964c459dbdb466464d3d55"
+      src="js/script.js"
+      defer
+    ></script>
     <title>QRty - Generate QR codes</title>
   </head>
   <body>
@@ -67,23 +79,24 @@
               <option value="700">700x700</option>
             </select>
 
-            <label for="cDark">Select Dark color</label>
-            <input
-              id="cDark"
-              name="cDark"
-              type="color"
-              class="w-1/5 border-2 border-gray-100 mr-2 focus:outline-none mb-5"
-              value="#1f1f1f"
-            />
+            <p>
+              <label for="cDark">Select Dark color</label>
+              <input
+                id="cDark"
+                name="cDark"
+                type="color"
+                class="w-1/5 mr-2 focus:outline-none mb-5"
+                value="#1f1f1f"
+              />
+            </p>
             <label for="cLight">Select Light color</label>
             <input
               id="cLight"
               name="cLight"
               type="color"
-              class="w-1/5 border-2 border-gray-100 mr-2 focus:outline-none mb-5"
+              class="w-1/5 mr-2 focus:outline-none mb-5"
               value="#e0e0e0"
             />
-
             <input
               id="name"
               placeholder="Optional. Default filename is qrcode"
@@ -103,6 +116,8 @@
             src="img/qr-code.svg"
             alt="hand holding phone with QR code"
             class="w-1/3 m-auto mb-10 md:w-full"
+            width="100"
+            height="100"
           />
         </div>
       </div>
