@@ -23,11 +23,7 @@
         },
       };
     </script>
-    <style>
-      #spinner {
-        display: none;
-      }
-    </style>
+    <link rel="stylesheet" href="./index.css" />
     <script
       nonce="5ec5d13e056b49488eaa5fc3eec37749"
       src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
@@ -43,7 +39,7 @@
     <title>QRty - Generate QR codes</title>
   </head>
   <body>
-    <header class="bg-red-500 p-4 mb-10">
+    <header class="p-4 mb-10">
       <div class="max-w-5xl m-auto">
         <div class="text-xl font-bold text-white">QRty :)</div>
       </div>
@@ -51,7 +47,7 @@
 
     <main>
       <div
-        class="flex flex-col-reverse align-center justify-center p-10 m-auto md:max-w-4xl md:flex-row"
+        class="flex flex-col-reverse h-screen align-center justify-center p-10 m-auto md:max-w-4xl md:flex-row"
       >
         <div class="w-full md:w-2/3 mr-24">
           <h1 class="text-3xl font-bold mb-5 md:text-4xl">FORM</h1>
@@ -85,7 +81,7 @@
                 id="cDark"
                 name="cDark"
                 type="color"
-                class="w-1/5 mr-2 focus:outline-none mb-5"
+                class="w-1/5 focus:outline-none mb-5"
                 value="#1f1f1f"
               />
             </p>
@@ -94,7 +90,7 @@
               id="cLight"
               name="cLight"
               type="color"
-              class="w-1/5 mr-2 focus:outline-none mb-5"
+              class="w-1/5 focus:outline-none mb-5"
               value="#e0e0e0"
             />
             <input
@@ -125,7 +121,7 @@
       <!-- Generated QR code -->
       <div
         id="generated"
-        class="max-w-5xl m-auto flex flex-col text-center align-center justify-center mt-20"
+        class="max-w-5xl m-auto flex flex-col flex-grow text-center align-center justify-center"
       >
         <!-- Spinner -->
         <div id="spinner" role="status">
@@ -150,4 +146,10 @@
       </div>
     </main>
   </body>
+  <footer class="w-full p-3">
+    <div class="text-center">
+      <span>Made with ♥ by</span>
+      <a target="_blank" href="https://github.com/EntOfMD/QRty"> EntOfMD</a>
+    </div>
+  </footer>
 </html>
