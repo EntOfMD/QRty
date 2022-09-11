@@ -58,7 +58,13 @@ const onSubmit = (e) => {
 
       setTimeout(() => {
         const saveUrl = qrCode.querySelector('img').src;
-        createSaveBtn(saveUrl, fileName);
+        if (
+          !/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
+            navigator.userAgent
+          )
+        ) {
+          createSaveBtn(saveUrl, fileName);
+        }
       }, 50);
     }, 600);
   }
